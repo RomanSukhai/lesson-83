@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(image/Kosmos.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block{
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    width: 400px;
+    height: 400px;
+    transform: rotateX(-60deg) rotateY(0deg) rotateZ(0deg);
+}
+.radius{
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(0deg);
+}
+.circle{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0, 128, 128, 0);
+    position: absolute;
+    z-index: 2;
+    top: 250px;
+    left: 250px;
+    right: 0;
+    bottom: 0;
+    animation-name: run;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    transform: rotateZ(0deg) translate(300px) rotateY(0deg) rotateX(-90deg);;
+    transform-style: preserve-3d;
+}
+.image2{
+    width: 151px;
+    height: 104px;
+}
+@keyframes run{
+    0%{
+        transform: rotate(0deg) translate(300px) rotateX(-90deg) rotateY(0deg) ;
+    }
+   50%{
+        transform: rotate(180deg) translate(300px) rotateX(-90deg) rotateY(150deg) ;
+    }
+    
+    100%{
+        transform: rotate(360deg) translate(300px) rotateX(-90deg) rotateY(360deg) ;
+    }
+    
+}
